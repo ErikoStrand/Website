@@ -6,13 +6,16 @@ body {
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
-	margin-left: clamp(1vw, 15vw, 25rem);
 	overflow: hidden;
+	margin: 0;
 }
 nav {
+	margin-left: clamp(1vw, 15vw, 25rem);
+	position: absolute;
 	gap: 45px;
 	display: flex;
 	flex-direction: column;
+	z-index: 1;
 }
 a {
 	font-size: clamp(1vw, 5vw, 3rem);
@@ -20,7 +23,6 @@ a {
 	color: rgb(26, 26, 26);
 	font-family: var(--font);
 	letter-spacing: 0.15em;
-	padding: 0px 10px;
 	text-decoration: none;
 }
 
@@ -32,4 +34,21 @@ a:hover {
 @keyframes open {
 	10% {letter-spacing: 0.30em;}
 	100% {letter-spacing: 0.15em;}
+}
+
+section {
+	overflow: hidden;
+}
+.image {
+	opacity: .4;
+	background: url("https://images.unsplash.com/photo-1567863053904-2894d131aa26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit");
+	background-repeat: repeat-x;
+	height: 500px;
+	width: 8000px;
+	animation: slide 90s linear infinite;
+}
+
+@keyframes slide {
+	0% {transform: translate(0);}
+	100% {transform: translate(-4000px);}
 }
