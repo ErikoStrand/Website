@@ -2,53 +2,127 @@
 	--font: monospace;
 }
 body {
-	background-color: #d7d8ca;
+	background-color: #1d1d1d;
+	overflow: hidden;
+	margin: 0px;
+	z-index: 0;
+}
+#menu {
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
-	overflow: hidden;
-	margin: 0;
 }
 nav {
 	margin-left: clamp(1vw, 15vw, 25rem);
 	position: absolute;
-	gap: 45px;
+	gap: 35px;
 	display: flex;
 	flex-direction: column;
-	z-index: 1;
+	z-index: 10;
+}
+nav:hover > a {
+	opacity: 0.5;
+}
+nav:hover > a:hover {
+	opacity: 1;
+	animation: open 0.3s;
 }
 a {
-	font-size: clamp(1vw, 5vw, 3rem);
+	font-size: clamp(1vw, 5vw, 4rem);
 	font-weight: bold;
-	color: rgb(26, 26, 26);
+	color: rgb(255, 255, 255);
 	font-family: var(--font);
 	letter-spacing: 0.15em;
 	text-decoration: none;
-}
-
-a:hover {
-	animation: open 0.5s;
-	opacity: 0.5;
+	transition: opacity 300ms ease;
 }
 
 @keyframes open {
-	10% {letter-spacing: 0.30em;}
+	10% {letter-spacing: 0.10em;}
 	100% {letter-spacing: 0.15em;}
 }
 
-section {
-	overflow: hidden;
+.background-pattern {
+	z-index: 3;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-image: radial-gradient(
+		rgba(2255, 255, 255, 0.1) 9%,
+		transparent 9%
+	);
+	background-position: 0% 0%;
+	background-size: 9vmin 9vmin;
+	left: 0px;
+	top: 0px;
+	transition: opacity 800ms ease,
+	background-size 600ms ease,
+	background-position 500ms ease;
 }
-.image {
-	opacity: .4;
-	background: url("https://images.unsplash.com/photo-1567863053904-2894d131aa26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit");
-	background-repeat: repeat-x;
-	height: 500px;
-	width: 8000px;
-	animation: slide 90s linear infinite;
+nav:hover ~ .background-pattern {
+	background-size: 8vmin 8vmin;
+	opacity: 0.5;
 }
 
-@keyframes slide {
-	0% {transform: translate(0);}
-	100% {transform: translate(-4000px);}
+#menu[data-active-index="0"] > .background-pattern {
+	background-position: 0% -15%;
 }
+#menu[data-active-index="1"] > .background-pattern {
+	background-position: 0% -30%;
+}
+#menu[data-active-index="2"] > .background-pattern {
+	background-position: 0% -45%;
+}
+#menu[data-active-index="3"] > .background-pattern {
+	background-position: 0% -60%;
+}
+#menu[data-active-index="4"] > .background-pattern {
+	background-position: 0% -75%;
+}
+#menu[data-active-index="5"] > .background-pattern {
+	background-position: 0% -90%;
+}
+#menu[data-active-index="6"] > .background-pattern {
+	background-position: 0% -105%;
+}
+/*
+.background-image {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzM4OTc4MA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+	background-position: 40%;
+	background-size: 170vmax;
+	opacity: 0.15;
+	transition: opacity 800ms ease,
+	background-size 600ms ease,
+	background-position 500ms ease;
+}
+nav:hover ~ .background-image {
+	background-size: 160vmax;
+	opacity: 0.10;
+}
+
+#menu[data-active-index="0"] > .background-image {
+	background-position: center 45%;
+}
+#menu[data-active-index="1"] > .background-image {
+	background-position: center 50%;
+}
+#menu[data-active-index="2"] > .background-image {
+	background-position: center 55%;
+}
+#menu[data-active-index="3"] > .background-image {
+	background-position: center 60%;
+}
+#menu[data-active-index="4"] > .background-image {
+	background-position: center 65%;
+}
+#menu[data-active-index="5"] > .background-image {
+	background-position: center 70%;
+}
+#menu[data-active-index="6"] > .background-image {
+	background-position: center 75%;
+}
+*/
