@@ -38,13 +38,6 @@ body {
     font-weight: bold;
     font-family: var(--font);
 }
-#menu .aboutme {
-    position: absolute;
-    bottom: 13%;
-    color: #E854DF;
-    width: var(--width)
-
-}
 .menuToggle a:hover {
     color: brown;
 }
@@ -70,10 +63,21 @@ body {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+#menu .aboutme {
+    position: absolute;
+    bottom: 13%;
+    color: #E854DF;
+    width: var(--width);
+    border-bottom: 2px #E854DF solid;
+
+}
+
 #menu li {
+    border-bottom: 2px gray solid;
     padding: 10px 0;
     font-size: 22px;
 }
+
 .menuToggle input:checked ~ ul {
     transform: translateX(100%);
 
