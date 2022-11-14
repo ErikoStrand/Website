@@ -65,10 +65,8 @@ body {
 
 #menu .aboutme {
     position: absolute;
-    bottom: 13%;
-    color: #E854DF;
+    bottom: 14%;
     width: var(--width);
-    border-bottom: 2px #E854DF solid;
 
 }
 
