@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Webbutveckling</title>
     <link rel="stylesheet" href="css/etikomoral.css">
-    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/burgermenu.css">
     <script src="https://kit.fontawesome.com/82a884facc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav>
-        <a class="home" href="index.html" title="Home"><i class="fa-solid fa-house-chimney"></i></a>
-        <a class="github" href="https://github.com/ErikoStrand" target="_blank" rel = "noopener" title="Github"><i class="fa-brands fa-github"></i></i></a>
-        <a class="pictures" href="bilder.html" title="Pictures"><i class="fa-regular fa-images"></i></a>
-        <a class="secrets" href="passdoor.html" title="Secrets"><i class="fa-solid fa-user-secret"></i></a>
-        <a class="poems" href="poems.html">Poems</a>
-        <a class="history" href="history.html">History</a>
-        <a class="aboutme" href="om-mig-sida.html">about me</a>
+    <nav role="navigation">
+        <div class="menuToggle">
+            <input type="checkbox"><i id="menuIcon" class="fa-solid fa-bars fa-3x"></i>
+            <ul id="menu">
+                <a class="home" href="index.html" title="Home"><li><i class="fa-solid fa-house-chimney"></i>Home</li></a>
+                <a class="github" href="https://github.com/ErikoStrand" target="_blank" rel = "noopener" title="Github"><li><i class="fa-brands fa-github"></i>Github</li></a>
+                <a class="pictures" href="bilder.html" title="Pictures"><li><i class="fa-regular fa-images"></i>Pictures</li></a>
+                <a class="secrets" href="passdoor.html" title="Secrets"><li><i class="fa-solid fa-user-secret"></i>Secrets</li></a>
+                <a class="poems" href="poems.html"><li>Poems</li></a>
+                <a class="history" href="history.html"><li>History</li></a>
+                <a class="aboutme" href="om-mig-sida.html"><li>About Me</li></a>
+            </ul>
+        </div>
     </nav>
     <main>
         <section>

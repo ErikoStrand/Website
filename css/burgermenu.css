@@ -1,0 +1,85 @@
+:root {
+    --left: 50px;
+    --top: 50px;
+    --width: 300px;
+    --padding: 50px;
+    --font: monospace;
+    --open-color: #2B3033
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.menuToggle {
+    display: block;
+    position: absolute;
+    margin: var(--top) var(--left);
+    z-index: 2;
+}
+.menuToggle input {
+    display: block;
+    width: 55px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+    left: -10px;
+    cursor: pointer;
+}
+
+.menuToggle i {
+    margin-right: 5px;
+}
+.menuToggle a {
+    text-decoration: none;
+    color: var(--open-color);
+    font-weight: bold;
+    font-family: var(--font);
+}
+#menu .aboutme {
+    position: absolute;
+    bottom: 13%;
+    color: #E854DF;
+    width: var(--width)
+
+}
+.menuToggle a:hover {
+    color: brown;
+}
+#menuIcon {
+    z-index: 2;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    transition: color 400ms cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu {
+    z-index: 1;
+    padding: 50px;
+    top: -15px;
+    padding-top: 125px;
+    left: calc(-1 * var(--left) - var(--width) - (var(--padding)));
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+.menuToggle input:checked ~ ul {
+    transform: translateX(100%);
+
+}
+.menuToggle input:checked ~ #menuIcon {
+    transition: color 400ms cubic-bezier(0.77,0.2,0.05,1.0);
+    color: black;
+
+}
