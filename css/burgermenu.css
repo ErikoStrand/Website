@@ -121,7 +121,7 @@ body {
     opacity: 0;
 }
 #dropdownMenu li {
-    font-size: large;
+    font-size: 18px;
     display: block;
     z-index: 2;
     border: none;
