@@ -97,3 +97,37 @@ body {
     color: black;
     opacity: 1;
 }
+
+#dropdownMenu {
+    margin-left: 50px;
+    display: none;
+    position: relative;
+    left: calc(-1 * var(--width) + (var(--left) * 2));
+}
+
+.dropdownToggle input {
+    position: absolute;
+    opacity: 1;
+    display: block;
+    z-index: 3;
+    width: var(--width);
+    margin-left: var(--left);
+    opacity: 0;
+}
+#dropdownMenu li {
+    font-size: large;
+    display: block;
+    z-index: 2;
+    border: none;
+}
+.dropdownToggle input:checked ~ #dropdownMenu {
+    display: inline-block;
+}
+.dropdownToggle .dropdownText {
+    color: var(--open-color);
+    font-family: var(--font);
+    font-weight: bold;
+    display: block;
+    width: var(--width);
+    padding: 10px 0;
+}
