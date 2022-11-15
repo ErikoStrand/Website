@@ -98,20 +98,26 @@ body {
     opacity: 1;
 }
 
+
+
+.dropdownToggle {
+    display: block;
+}
 #dropdownMenu {
-    margin-left: 50px;
+    padding: 0;
     display: none;
     position: relative;
-    left: calc(-1 * var(--width) + (var(--left) * 2));
+    left: calc(-1 * var(--width));
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 100%;
 }
-
 .dropdownToggle input {
+    margin-left: var(--left);
     position: absolute;
-    opacity: 1;
     display: block;
     z-index: 3;
     width: var(--width);
-    margin-left: var(--left);
     opacity: 0;
 }
 #dropdownMenu li {
@@ -123,6 +129,7 @@ body {
 .dropdownToggle input:checked ~ #dropdownMenu {
     display: inline-block;
 }
+
 .dropdownToggle .dropdownText {
     color: var(--open-color);
     font-family: var(--font);
@@ -130,4 +137,30 @@ body {
     display: block;
     width: var(--width);
     padding: 10px 0;
+    transition: color 200ms ease-in;
+
+}
+
+.dropdownToggle .dropdownText i:nth-child(1) {
+    position: absolute;
+    left: calc(var(--width) + (var(--left)/2));
+    color: var(--open-color);
+}
+
+.dropdownToggle .dropdownText i:nth-child(2) {
+    color: var(--open-color);
+    position: absolute;
+    left: calc(var(--width) + (var(--left)/2));
+    opacity: 0;
+}
+
+.dropdownToggle input:checked ~ .dropdownText i:nth-child(1) {
+   opacity: 0;
+}
+.dropdownToggle input:checked ~ .dropdownText i:nth-child(2) {
+    opacity: 1;
+}
+
+#menu .dropdownToggle input:hover ~ .dropdownText {
+    color: brown;
 }
