@@ -14,7 +14,7 @@ body {
 
 .menuToggle {
     display: block;
-    position: absolute;
+    position: fixed;
     margin: var(--top) var(--left);
     z-index: 2;
 }
