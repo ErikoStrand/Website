@@ -32,14 +32,19 @@ body {
 .menuToggle i {
     margin-right: 5px;
 }
-.menuToggle a {
+
+#menu li a {
     text-decoration: none;
     color: var(--open-color);
     font-weight: bold;
     font-family: var(--font);
     transition: color 200ms ease-in;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
 }
-.menuToggle a:hover {
+#menu li a:hover {
     color: brown;
 }
 
@@ -74,16 +79,8 @@ body {
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu .aboutme {
-    position: absolute;
-    bottom: 14%;
-    width: var(--width);
-
-}
-
 #menu li {
     border-bottom: 2px gray solid;
-    padding: 10px 0;
     font-size: 22px;
 }
 
