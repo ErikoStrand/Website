@@ -1,22 +1,24 @@
 body {
-    background-color: whitesmoke;
+    background-color: rgb(44, 44, 44);
+    color: whitesmoke;
 }
 :root {
     --font: monospace;
 }
 article  {
-    max-width: 900px;
-    margin-top: 55px;
+    max-width: 50%;
+    margin: auto;
+    
 }
 
 h2 {
     text-align: left;
     font-family: var(--font);
-    font-size: 20px;
+    font-size: 18px;
 }
 p {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--font);
     
 }

@@ -20,13 +20,14 @@ body {
 .menuToggle {
     display: block;
     position: fixed;
-    margin: var(--top) var(--left);
     z-index: 2;
+    left: var(--left);
+    top: var(--top);
 }
 .menuToggle input {
     display: block;
-    width: 55px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     position: absolute;
     opacity: 0;
     z-index: 3;
@@ -61,6 +62,7 @@ body {
     z-index: 2;
     color: BLACK;
     top: -7px;
+    left: -4px;
     opacity: 0;
 }
 
@@ -70,6 +72,8 @@ body {
     position: absolute;
     color: white;
     transition: color 400ms cubic-bezier(0.77,0.2,0.05,1.0);
+    left: -5px;
+    top: 2px;
 }
 
 #menu {

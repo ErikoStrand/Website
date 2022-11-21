@@ -4,12 +4,14 @@
 
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(44, 44, 44);
     overflow: scroll;
-    max-width: 900px;
-    margin: auto;
 }
 article {
+    max-width: 900px;
+    margin: auto;
     columns: 3;
     gap: 20px 20px;
     margin-top: 55px;
