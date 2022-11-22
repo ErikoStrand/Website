@@ -1,31 +1,25 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(163, 163, 163);
 }
 :root {
     --font: monospace;
-    --max-width: 900px
 }
-h1 {
-    margin-top: 5%;
-    font-size: clamp(1vw, 2vw, 3rem);
+main header {
+    display: block;
+    width: 200px;
+    height: 150px;
+    float: right;
+    background-color: aqua;
+}
+main header h1 {
+    margin: 0;
+    color: white;
     font-family: var(--font);
-    color: rgb(0, 0, 0);
-    text-align: center;
 }
-h2 {
-    font-size: clamp(1vw, 2vw, 3rem);
+.big {
+    color: red;
     font-family: var(--font);
-    color: rgb(53, 53, 53);
-    text-align: center;
-}
-p {
-    font-size: clamp(1vw, 2vw, 2rem);
-    font-family: var(--font);
-    color: rgb(36, 36, 36);
-    text-align: left;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
+    font-size: 80px;
 }
